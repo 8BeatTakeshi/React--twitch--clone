@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
   return (
     <div>
-      <nav className="header-top">
+      <nav className="header_top">
         <ul className="menuList">
           <li className="navLink">
             <img src={logo} alt="Logo Twitch" className="logo" />
