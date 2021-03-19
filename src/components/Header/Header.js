@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './TwitchIcon.svg';
 import SearchIcon from './SearchIcon.svg';
 import MenuIcon from './MenuIcon.svg';
@@ -10,10 +11,22 @@ const Header = () => {
       <nav className="header_top">
         <ul className="menuList">
           <li className="navLink">
-            <img src={logo} alt="Logo Twitch" className="logo" />
+            <Link className="link" to="/">
+              <img src={logo} alt="Logo Twitch" className="logo" />
+            </Link>
           </li>
-          <li className="navLink">Top Games</li>
-          <li className="navLink">Top Streams</li>
+
+          <li className="navLink">
+            <Link className="link" to="/">
+              Top Games{' '}
+            </Link>
+          </li>
+
+          <li className="navLink">
+            <Link className="link" to="/top-streams">
+              Top Streams
+            </Link>
+          </li>
           <li className="navLink">
             <form className="formSubmit">
               <input type="text" className="searchInput" />

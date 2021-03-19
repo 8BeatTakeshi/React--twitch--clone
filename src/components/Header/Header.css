@@ -24,6 +24,12 @@
   width: 600px;
 }
 
+.link {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .logo {
   margin-top: 5px;
 }
