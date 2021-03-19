@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Games} />
           <Route exact path="/top-streams" component={TopStreams} />
-          <Route exact path="/live" component={Live} />
+          <Route exact path="/live/:slug" component={Live} />
         </Switch>
       </div>
     </Router>
