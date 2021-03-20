@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../api';
 import './Games.css';
 
@@ -36,7 +37,17 @@ const Games = () => {
             />
             <div className="games_card_body">
               <h5 className="games_card_title">{game.name}</h5>
-              <div className="games_card_btn">Regarder {game.name}</div>
+              <Link
+                className="link"
+                to={{
+                  pathname: 'game/' + game.name.replace(/ +/g, ''), // regex to remove spaces
+                  state: {
+                    gameId: game.id,
+                  },
+                }}
+              >
+                <div className="games_card_btn">Regarder {game.name}</div>
+              </Link>
             </div>
           </div>
         ))}

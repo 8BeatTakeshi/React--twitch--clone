@@ -1,0 +1,115 @@
+.gameStreams_title {
+  padding-top: 100px;
+  font-size: 53px;
+  font-weight: 300;
+  padding-left: 260px;
+  padding-bottom: 10px;
+}
+
+.gameStreams_subtitle {
+  font-size: 25px;
+  font-weight: 300;
+  padding-left: 260px;
+  padding-bottom: 50px;
+}
+
+.textColored {
+  color: #6441a4;
+}
+
+.gameStreams_presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 260px;
+}
+
+.gameStreams_card {
+  height: 380px;
+  width: 320px;
+  margin: 0 30px 30px 0;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0, 0, 0, 0.75);
+}
+
+.gameStreams_card:hover {
+  transform: translateY(-5px);
+}
+
+.gameStreams_card_img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.gameStreams_card_body {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gameStreams_card_title {
+  font-size: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+  font-weight: 500;
+}
+
+.gameStreams_card_text {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.gameStreams_card_btn {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #212529;
+  font-size: 14px;
+  line-height: 1.125;
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.gameStreams_card_btn {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .gameStreams_presentation {
+    padding-left: 30px;
+  }
+
+  .gameStreams_title {
+    padding-left: 0px;
+    font-size: 30px;
+  }
+  .gameStreams_subtitle {
+    font-size: 17px;
+    padding-left: 0px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .gameStreams_presentation {
+    padding-left: 0px;
+  }
+
+  .gameStreams_card {
+    margin: 0 0 30px 0;
+  }
+}
