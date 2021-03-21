@@ -9,6 +9,7 @@ import './Header.css';
 const Header = () => {
   const [menu, setMenu] = useState(false); // Responsive Menu
   const [smallScreen, setSmallScreen] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 900px');
@@ -34,6 +35,14 @@ const Header = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleKeyPress = (e) => {
+    setSearchInput(e.target.value);
+  };
+
   return (
     <div>
       <nav className="header_top">
@@ -57,15 +66,28 @@ const Header = () => {
               </Link>
             </li>
             <li className="navLink">
-              <form className="formSubmit">
-                <input type="text" className="searchInput" />
-                <button type="submit">
-                  <img
-                    src={searchIcon}
-                    alt="Icone loupe"
-                    className="searchIcon"
-                  />
-                </button>
+              <form className="formSubmit" onSubmit={handleSubmit}>
+                <input
+                  required
+                  value={searchInput}
+                  type="text"
+                  className="searchInput"
+                  onChange={(e) => handleKeyPress(e)}
+                />
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/resultats/${searchInput}`,
+                  }}
+                >
+                  <button type="submit">
+                    <img
+                      src={searchIcon}
+                      alt="Icone loupe"
+                      className="searchIcon"
+                    />
+                  </button>
+                </Link>
               </form>
             </li>
           </ul>
