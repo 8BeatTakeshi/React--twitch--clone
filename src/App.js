@@ -7,6 +7,7 @@ import TopStreams from './components/TopStreams/TopStreams';
 import Live from './components/Live/Live';
 import GameStreams from './components/GameStreams/GameStreams';
 import Results from './components/Results/Results';
+import Error from './components/Error/Error';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/live/:slug" component={Live} />
           <Route exact path="/game/:slug" component={GameStreams} />
           <Route exact path="/resultats/:slug" component={Results} />
+          <Route exact path="/resultats" component={Error} />
         </Switch>
       </div>
     </Router>

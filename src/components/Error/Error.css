@@ -1,0 +1,37 @@
+.error_container {
+  overflow-x: hidden;
+  padding-top: 50px;
+  padding-left: 239px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error_container h4 {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.error_container p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  .error_container {
+    overflow-x: hidden;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+
+  .error_container h4 {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .error_container h4 {
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+}

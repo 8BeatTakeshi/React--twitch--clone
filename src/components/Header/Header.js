@@ -35,7 +35,7 @@ const Header = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, mediaQuery) => {
     e.preventDefault();
   };
 
@@ -80,7 +80,10 @@ const Header = () => {
                     pathname: `/resultats/${searchInput}`,
                   }}
                 >
-                  <button type="submit">
+                  <button
+                    type="submit"
+                    onClick={() => smallScreen && setMenu(!menu)}
+                  >
                     <img
                       src={searchIcon}
                       alt="Icone loupe"
