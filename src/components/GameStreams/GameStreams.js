@@ -65,7 +65,7 @@ const GameStreams = () => {
     };
 
     fetchData();
-  }, []);
+  }, [location.state.gameId]);
 
   return (
     <div>
